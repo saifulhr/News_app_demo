@@ -39,7 +39,7 @@ class _BottomnavBarState extends State<BottomnavBar> {
         child: FloatingActionButton(
           onPressed: () {
             setState(() {
-              _selectedIndex = 2; // Center button for "Add post"
+              _selectedIndex = 2;
             });
           },
           backgroundColor: Colors.blue,
