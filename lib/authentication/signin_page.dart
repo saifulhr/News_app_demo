@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app/authentication/forgotpas_page.dart';
 import 'package:news_app/authentication/singup_page.dart';
 import 'package:news_app/screen/country_page.dart';
+
 class SigninPage extends StatefulWidget {
   const SigninPage({super.key});
 
@@ -97,7 +98,10 @@ class _SigninPageState extends State<SigninPage> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgotpasPage()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ForgotpasPage()));
                         },
                         child: Text(
                           'Forgot Password?',
@@ -122,8 +126,8 @@ class _SigninPageState extends State<SigninPage> {
                                 builder: (context) => CountryPage()));
                       },
                       style: ButtonStyle(
-                          padding: WidgetStateProperty.all(
-                              EdgeInsets.symmetric(vertical: 0, horizontal: 45)),
+                          padding: WidgetStateProperty.all(EdgeInsets.symmetric(
+                              vertical: 0, horizontal: 45)),
                           backgroundColor: WidgetStateProperty.all(
                               Color.fromRGBO(131, 172, 253, 1)),
                           shape: WidgetStateProperty.all(RoundedRectangleBorder(
@@ -246,7 +250,8 @@ class _SigninPageState extends State<SigninPage> {
                           child: Text(
                             'Register',
                             style: TextStyle(
-                                color: Colors.black, fontWeight: FontWeight.bold),
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
                           ))
                     ],
                   )

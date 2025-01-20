@@ -79,7 +79,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                  ProfilePage()));
+                                                ProfilePage()));
                                   },
                                   child: Row(
                                     children: [

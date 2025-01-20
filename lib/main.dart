@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/authentication/singup_page.dart';
-import 'package:news_app/bottomnav_bar.dart';
 
 void main() {
   runApp(const MyApp());

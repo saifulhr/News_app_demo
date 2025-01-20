@@ -18,7 +18,10 @@ class _AddpostPageState extends State<AddpostPage> {
           onTap: () {
             Navigator.of(context).pop();
           },
-          child: Icon(Icons.arrow_back),
+          child: Icon(
+            Icons.arrow_back,
+            color: Color.fromRGBO(131, 172, 253, 1),
+          ),
         ),
       ),
       body: SingleChildScrollView(

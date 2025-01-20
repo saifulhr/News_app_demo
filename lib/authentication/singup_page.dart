@@ -195,7 +195,10 @@ class _SingupPageState extends State<SingupPage> {
                   Center(
                       child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SigninPage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SigninPage()));
                     },
                     style: ButtonStyle(
                         padding: WidgetStateProperty.all(
