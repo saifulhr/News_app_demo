@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/authentication/signin_page.dart';
 import 'package:news_app/data/setting_json.dart';
+import 'package:news_app/screen/profile_page.dart';
 
 class PortfolioPage extends StatefulWidget {
   const PortfolioPage({super.key});
@@ -71,30 +72,64 @@ class _PortfolioPageState extends State<PortfolioPage> {
                                 ],
                               ),
                             )
-                          : Row(
-                              children: [
-                                Image.asset(
-                                  '${item['image']}',
-                                  height: 20,
-                                  width: 20,
-                                  fit: BoxFit.cover,
+                          : item['text'] == 'Profile'
+                              ? GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                  ProfilePage()));
+                                  },
+                                  child: Row(
+                                    children: [
+                                      Image.asset(
+                                        '${item['image']}',
+                                        height: 20,
+                                        width: 20,
+                                        fit: BoxFit.cover,
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text(
+                                        '${item['text']}',
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 13),
+                                      ),
+                                      Spacer(),
+                                      Icon(
+                                        Icons.arrow_forward_ios,
+                                        size: 16,
+                                        color: Colors.grey,
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              : Row(
+                                  children: [
+                                    Image.asset(
+                                      '${item['image']}',
+                                      height: 20,
+                                      width: 20,
+                                      fit: BoxFit.cover,
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text(
+                                      '${item['text']}',
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 13),
+                                    ),
+                                    Spacer(),
+                                    Icon(
+                                      Icons.arrow_forward_ios,
+                                      size: 16,
+                                      color: Colors.grey,
+                                    ),
+                                  ],
                                 ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  '${item['text']}',
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 13),
-                                ),
-                                Spacer(),
-                                Icon(
-                                  Icons.arrow_forward_ios,
-                                  size: 16,
-                                  color: Colors.grey,
-                                ),
-                              ],
-                            ),
                       SizedBox(
                         height: 8,
                       ),
